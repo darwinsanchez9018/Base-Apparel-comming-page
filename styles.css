@@ -1,0 +1,229 @@
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-red: hsl(0, 6%, 24%);
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--desaturated-red);
+    font-weight: 300;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-repeat: no-repeat;
+    background-size:auto;
+}
+
+.header {
+    padding: 30px;
+}
+
+.header__image {
+    width: 33%;
+}
+
+.photo {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    padding: 66px 80px 15px 66px;
+    letter-spacing: .5rem;
+    color: var(--dark-red);
+}
+
+.title__span {
+    display: block;
+    font-weight: 300;
+    color:var(--desaturated-red);
+}
+
+.text {
+    margin: 0;
+    padding: 15px 39px 39px;
+    font-size: .85rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.4rem;
+}
+
+.form {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.form--error {
+    border: 2px solid var(--soft-red);
+    border-radius: 30px;
+}
+
+.form--error::after {
+    content: url(./assets/images/icon-error.svg);
+    position: absolute;
+    right: 70px;
+    top: 10px;
+}
+
+.form--error::before {
+    content: "Please provide a valid email";
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    font-size: .75rem;
+    color: var(--soft-red);
+    font-weight: 400;
+}
+
+.form__input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--desaturated-red);
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 25px;
+    color: var(--desaturated-red);
+}
+
+::placeholder {
+    color: var(--desaturated-red);
+    font-size: .8rem;
+}
+
+.form__submit {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0px 15px 16px -5px rgba(0, 0, 0, .3);
+}
+
+.form__submit::after {
+    content: url(./assets/images/icon-arrow.svg);
+}
+
+
+.attribution {
+    margin: 0;
+    font-size: 11px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--dark-red);
+    text-decoration: none;
+
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 768px){
+    body {
+        background-image: url(./assets/images/bg-pattern-desktop.svg);
+        background-size: 62.4%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .header {
+        position: absolute;
+        left: 0;
+        padding: 65px 11.5%;
+    }
+
+    .header__image {
+        width: 110%;
+    }
+
+    .photo {
+        width: 610px;
+        height: 800px;
+    }
+
+    .title {
+        padding: 0;
+        padding-left: 164px;
+        margin-top: 235px;
+        text-align: left;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        letter-spacing: 20px;
+    }
+
+    .text {
+        padding: 0;
+        padding: 15px 164px;
+        padding-right: 0;
+        width: 470px;
+        text-align: left;
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    .form {
+        width: 60%;
+        margin-top: 50px;
+    }
+
+    .form--error::after {
+        right: 120px;
+        top: 15px;
+    }
+
+    .form--error::before {
+        top: 70px;
+        font-size: .9rem;
+
+    }
+
+
+    .form__input {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    ::placeholder {
+        font-size: 1rem;
+    }
+
+    .form__submit {
+        width: 100px;
+    }
+
+    .form__submit:hover {
+        cursor: pointer;
+        top: -3px;
+        right: -3px;
+        width: 110px;
+        height: 60px;
+        background-image: linear-gradient(135deg, hsl(0, 40%, 91%), hsl(0, 80%, 86%));
+    }
+
+
+    .attribution {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -60px;
+        font-size: .9rem;
+        opacity: .7;
+    }
+    
+    .attribution a:hover {
+        color: var(--soft-red);
+    }
+}
